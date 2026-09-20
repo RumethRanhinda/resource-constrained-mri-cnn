@@ -1,0 +1,25 @@
+# Python environment and cache
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+
+# Datasets and Data Processing 
+data/
+*.zip
+*.tar.gz
+*.csv
+
+# Model Checkpoints and Weights
+*.h5
+*.pt
+*.pth
+models/
+
+# OS Generated Files
+.DS_Store
+Thumbs.db
