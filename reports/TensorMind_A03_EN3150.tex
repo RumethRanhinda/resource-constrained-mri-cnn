@@ -1,0 +1,103 @@
+\documentclass[11pt]{article}
+
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+
+%\usepackage{mathptmx}  % Times New Roman-like font
+\usepackage{titling}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{makecell}
+\usepackage{enumitem}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{multicol}
+\usepackage{tikz}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usetikzlibrary{shapes, arrows, positioning}
+\usepackage[justification=centering]{caption}
+
+
+\hypersetup{hidelinks}
+\urlstyle{same}
+
+
+% Institution, Department, Module, and Topic
+\newcommand{\institution}{University of Moratuwa}
+\newcommand{\faculty}{Faculty of Engineering}
+\newcommand{\department}{Department of Electronic and Telecommunication \\Engineering}
+\newcommand{\module}{EN3150}
+\newcommand{\moduleName}{Pattern Recognition}
+\newcommand{\assignmentProject}{Image Classification using CNN}
+
+\newcommand{\tm}{\textsuperscript{TM}}
+\newcommand{\reg}{\textsuperscript{\textregistered}}
+
+\setlist[enumerate,1]{leftmargin=*, label=\arabic*.}   % Level 1: numbers
+\setlist[enumerate,2]{leftmargin=2em, label=--}        % Level 2: dashes
+\setlist[enumerate,3]{leftmargin=3.5em, label=\roman*.)} % Level 3: roman numerals
+
+% Define the simple title text only (no tabular here!)
+\title{
+	{\LARGE \textbf{\institution}} \\
+	\vspace{0.25em}
+	{\LARGE \textbf{\faculty}} \\
+	\vspace{0.75em}
+	{\large \textbf{\department}} \\
+	\vspace{0.5em}
+	{\large \module} \\
+	{\large \moduleName} \\[0.5em]
+	{\LARGE \textbf{\assignmentProject}}\\
+}
+
+\date{}
+
+\begin{document}
+	\pagenumbering{gobble}
+	
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.6\linewidth]{figures/University_of_Moratuwa_logo}
+		\label{fig:universityofmoratuwalogo}
+	\end{figure}
+	
+	\maketitle
+	\vspace{-8em}
+	\begin{center}
+		{\large \textbf{Team TensorMind}} \\[0.75em] % title + spacing
+		\renewcommand{\arraystretch}{1.5}
+		\begin{tabular}{|p{0.15\textwidth}|p{0.3\textwidth}|}
+			\hline
+			230013A & D.H. Abeywarna  \\ \hline
+			230045X & C.S.B Anthony \\ \hline
+			230566U & S.M.R.R. Samarasinghe \\ \hline
+			230697V & J.A.H.R. Weerasinghe  \\ \hline
+			  
+		\end{tabular}
+	\end{center}
+	
+	
+	\newpage
+	
+	% --- Table of Contents ---
+	\tableofcontents
+	\newpage
+	% -------------------------
+	
+	\pagenumbering{arabic}
+	
+	\setlength{\parindent}{0pt}
+	\section*{Introduction}
+	
+	
+	\begin{center}
+		* \quad * \quad *
+	\end{center}
+	
+\end{document}
