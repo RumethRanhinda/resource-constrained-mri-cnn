@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.9.6)  15 OCT 2026 22:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.9.6)  16 OCT 2026 12:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -864,6 +864,8 @@ File: pgflibraryarrows.code.tex 2026-08-01 v3.1.12 (3.1.12)
 /libraries\tikzlibrarypositioning.code.tex
 File: tikzlibrarypositioning.code.tex 2026-08-01 v3.1.12 (3.1.12)
 )
+Package hyperref Info: Option `colorlinks' set `true' on input line 30.
+
 (C:\Users\user\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\l3backend-pdfte
 x.def
 File: l3backend-pdftex.def 2026-08-10 L3 backend support: PDF output (pdfTeX)
@@ -871,24 +873,24 @@ File: l3backend-pdftex.def 2026-08-10 L3 backend support: PDF output (pdfTeX)
 ) (TensorMind_A03_EN3150.aux)
 \openout1 = `TensorMind_A03_EN3150.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -950,7 +952,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 g
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 61.
+Package hyperref Info: Link coloring ON on input line 63.
  (TensorMind_A03_EN3150.out) (TensorMind_A03_EN3150.out)
 \@outlinefile=\write4
 \openout4 = `TensorMind_A03_EN3150.out'.
@@ -960,22 +962,22 @@ Package caption Info: float package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count370
-<figures/University_of_Moratuwa_logo.png, id=6, 307.1475pt x 326.21875pt>
+<figures/University_of_Moratuwa_logo.png, id=78, 307.1475pt x 326.21875pt>
 File: figures/University_of_Moratuwa_logo.png Graphic file (type png)
 <use figures/University_of_Moratuwa_logo.png>
 Package pdftex.def Info: figures/University_of_Moratuwa_logo.png  used on input
- line 66.
+ line 68.
 (pdftex.def)             Requested size: 271.7835pt x 288.6762pt.
 
 
 LaTeX Warning: No \author given.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 75.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 77.
 
 (C:\Users\user\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 75.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 77.
 
 
 (C:\Users\user\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
@@ -993,30 +995,96 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.}) has b
 een already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.90 	\newpage
-               [2] [1] (TensorMind_A03_EN3150.aux)
+l.93 	\newpage
+               [2]
+Overfull \hbox (1.82146pt too wide) in paragraph at lines 101--102
+\OT1/cmr/m/n/10.95 Deploying deep learn-ing mod-els on resource-constrained em-
+bed-ded plat-forms (e.g., ARM Cortex-
+ []
+
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 127.
+[1] [2] [3]
+Overfull \hbox (19.55295pt too wide) in paragraph at lines 209--233
+ [][] 
+ []
+
+[4]
+<figures/model_a_learning_curves.png, id=165, 867.24pt x 361.35pt>
+File: figures/model_a_learning_curves.png Graphic file (type png)
+<use figures/model_a_learning_curves.png>
+Package pdftex.def Info: figures/model_a_learning_curves.png  used on input lin
+e 265.
+(pdftex.def)             Requested size: 217.42265pt x 90.59091pt.
+<figures/model_b_learning_curves.png, id=166, 867.24pt x 361.35pt>
+File: figures/model_b_learning_curves.png Graphic file (type png)
+<use figures/model_b_learning_curves.png>
+Package pdftex.def Info: figures/model_b_learning_curves.png  used on input lin
+e 272.
+(pdftex.def)             Requested size: 217.42265pt x 90.59091pt.
+<figures/model_a_confusion_matrix.png, id=169, 433.62pt x 361.35pt>
+File: figures/model_a_confusion_matrix.png Graphic file (type png)
+<use figures/model_a_confusion_matrix.png>
+Package pdftex.def Info: figures/model_a_confusion_matrix.png  used on input li
+ne 293.
+(pdftex.def)             Requested size: 203.83417pt x 169.86209pt.
+<figures/model_b_confusion_matrix.png, id=170, 433.62pt x 361.35pt>
+File: figures/model_b_confusion_matrix.png Graphic file (type png)
+<use figures/model_b_confusion_matrix.png>
+Package pdftex.def Info: figures/model_b_confusion_matrix.png  used on input li
+ne 300.
+(pdftex.def)             Requested size: 203.83417pt x 169.86209pt.
+ [5 <./figures/model_a_learning_curves.png> <./figures/model_b_learning_curves.
+png>] [6 <./figures/model_a_confusion_matrix.png> <./figures/model_b_confusion_
+matrix.png>] [7] (TensorMind_A03_EN3150.aux)
  ***********
 LaTeX2e <2026-06-01>
 L3 programming layer <2026-08-10>
  ***********
-Package rerunfilecheck Info: File `TensorMind_A03_EN3150.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+
+
+Package rerunfilecheck Warning: File `TensorMind_A03_EN3150.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `TensorMind_A03_EN3150.out':
+(rerunfilecheck)             Before: 0CD53B8E83DF16C90E28C43663D6217B;4855
+(rerunfilecheck)             After:  598B7D147905943C1FFE6BE8F69DFD7A;4596.
  ) 
 Here is how much of TeX's memory you used:
- 26906 strings out of 467441
- 524088 string characters out of 5408078
- 941556 words of memory out of 5000000
- 55794 multiletter control sequences out of 15000+600000
- 634185 words of font info for 64 fonts, out of 8000000 for 9000
+ 27078 strings out of 467441
+ 527361 string characters out of 5408078
+ 953376 words of memory out of 5000000
+ 55908 multiletter control sequences out of 15000+600000
+ 638145 words of font info for 80 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 92i,7n,104p,427b,450s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
-mbx12.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
-nts/cm/cmr10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/publi
-c/amsfonts/cm/cmr12.pfb>
-Output written on TensorMind_A03_EN3150.pdf (3 pages, 139093 bytes).
+ 92i,11n,104p,484b,716s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+pdfTeX warning (dest): name{section.5} has been referenced but does not exist, 
+replaced by a fixed one
+
+ <C:\Users\user\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm109
+5.pk><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/c
+m/cmbx10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
+sfonts/cm/cmbx12.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/p
+ublic/amsfonts/cm/cmex10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts
+/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/user/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/user/AppData/Local/Progra
+ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/user/AppData/Local
+/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/user/AppDat
+a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/user
+/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/User
+s/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C
+:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy1
+0.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/
+cm/cmsy6.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
+sfonts/cm/cmsy8.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/type1/pu
+blic/amsfonts/cm/cmti10.pfb><C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/
+type1/public/amsfonts/cm/cmtt10.pfb><C:/Users/user/AppData/Local/Programs/MiKTe
+X/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on TensorMind_A03_EN3150.pdf (9 pages, 869501 bytes).
 PDF statistics:
- 42 PDF objects out of 1000 (max. 8388607)
- 6 named destinations out of 1000 (max. 500000)
- 18 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 281 PDF objects out of 1000 (max. 8388607)
+ 55 named destinations out of 1000 (max. 500000)
+ 182 words of extra memory for PDF output out of 10000 (max. 10000000)
 
