@@ -1,15 +1,5 @@
-"""Section 3: optimizer comparison on Model B (Adam vs SGD vs SGD+Momentum).
+"""Run from the repo root: python src/optimizer_study.py --epochs 20"""
 
-Run from the repo root:
-    python src/optimizer_study.py --epochs 2     # quick smoke test
-    python src/optimizer_study.py --epochs 20    # full run
-
-Data loading, loss and model builder match src/train.py and src/model_b.py.
-Unlike train.py, this uses NO early stopping / LR scheduler, so every optimizer
-runs the same fixed number of epochs and the curves are directly comparable.
-Test metrics come from the best-validation-loss checkpoint (the same idea as
-restore_best_weights in train.py), not from the last epoch.
-"""
 import os
 import json
 import time
@@ -19,14 +9,13 @@ import matplotlib.pyplot as plt
 import tensorflow as tf
 from tensorflow import keras
 
-from model_b import build_model_b   # <-- adjust to match teammate's function name
+from model_b import build_model_b
 
 SEED, IMG, BATCH = 42, (64, 64), 32
 
 
 class BestWeights(keras.callbacks.Callback):
-    """Remember the weights from the epoch with the lowest validation loss.
-    Never stops training early, so every optimizer still runs all epochs."""
+    """Tracks the lowest validation loss without stopping training."""
     def on_train_begin(self, logs=None):
         self.best, self.best_epoch, self.weights = float("inf"), 0, None
 
@@ -38,7 +27,6 @@ class BestWeights(keras.callbacks.Callback):
 
 
 def load(split):
-    """Load one split from data/processed/<split> (settings copied from train.py)."""
     ds = keras.utils.image_dataset_from_directory(
         f"data/processed/{split}", labels="inferred", label_mode="categorical",
         color_mode="grayscale", batch_size=BATCH, image_size=IMG,
@@ -47,17 +35,16 @@ def load(split):
 
 
 def run(name, make_opt, epochs, train, val, test):
-    """Train a fresh Model B with the given optimizer and collect results."""
-    keras.utils.set_random_seed(SEED)   # same initial weights for every optimizer
+    keras.utils.set_random_seed(SEED)   # identical initial weights for every optimizer
     model = build_model_b(input_shape=(64, 64, 1), num_classes=2)
     model.compile(optimizer=make_opt(),
-                  loss="categorical_crossentropy",   # same as train.py
+                  loss="categorical_crossentropy",
                   metrics=["accuracy"])
     bw = BestWeights()
     t0 = time.time()
     h = model.fit(train, validation_data=val, epochs=epochs, callbacks=[bw], verbose=2)
     elapsed = time.time() - t0
-    model.set_weights(bw.weights)   # test the best-val-loss checkpoint, not the noisy last epoch
+    model.set_weights(bw.weights)
     test_loss, test_acc = model.evaluate(test, verbose=0)
     hist = h.history
     hit90 = next((i + 1 for i, a in enumerate(hist["val_accuracy"]) if a >= 0.90), None)
@@ -68,7 +55,6 @@ def run(name, make_opt, epochs, train, val, test):
 
 
 def plot(results, fname, title):
-    """Plot training and validation loss for every run on one figure."""
     fig, ax = plt.subplots(1, 2, figsize=(12, 4))
     for r in results:
         ax[0].plot(r["history"]["loss"], label=r["name"])
@@ -87,7 +73,6 @@ def plot(results, fname, title):
 
 
 def table(results):
-    """Print a summary table to the console."""
     print(f"{'Optimizer':34}{'BestValLoss':>12}{'BestEpoch':>10}"
           f"{'TestAcc':>9}{'Ep>=90%':>9}{'s/ep':>7}")
     for r in results:
@@ -102,7 +87,6 @@ if __name__ == "__main__":
     os.makedirs("reports/figures", exist_ok=True)
     train, val, test = load("train"), load("val"), load("test")
 
-    # Main comparison: Adam vs plain SGD vs SGD with momentum
     main_cfg = {
         "Adam (lr=0.001)": lambda: keras.optimizers.Adam(1e-3),
         "SGD (lr=0.01, m=0)": lambda: keras.optimizers.SGD(0.01, momentum=0.0),
@@ -112,7 +96,6 @@ if __name__ == "__main__":
     plot(main, "optimizer_comparison.png", "Model B: Adam vs SGD vs SGD+Momentum")
     table(main)
 
-    # Momentum sweep: isolates the effect of the momentum parameter
     sweep_cfg = {f"SGD lr=0.01, m={m}": (lambda m=m: keras.optimizers.SGD(0.01, momentum=m))
                  for m in [0.0, 0.5, 0.9, 0.99]}
     sweep = [run(n, f, args.epochs, train, val, test) for n, f in sweep_cfg.items()]
