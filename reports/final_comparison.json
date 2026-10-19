@@ -1,0 +1,106 @@
+[
+  {
+    "model": "Model A",
+    "parameters_total": 228418,
+    "float32_weight_estimate_kb": 892.2578125,
+    "keras_file_size_mb": 2.6690568923950195,
+    "estimated_macs": 14876800,
+    "estimated_macs_millions": 14.8768,
+    "mac_estimation_issues": [],
+    "inference_latency_median_ms": 0.9300000092480332,
+    "latency_device": "TensorFlow device used by this run",
+    "test_accuracy": 0.9666666666666667,
+    "demented_precision": 0.9786324786324786,
+    "demented_recall": 0.9541666666666667,
+    "nondemented_precision": 0.9552845528455285,
+    "nondemented_recall": 0.9791666666666666,
+    "confusion_matrix_labels_demented_then_nondemented": [
+      [
+        458,
+        22
+      ],
+      [
+        10,
+        470
+      ]
+    ]
+  },
+  {
+    "model": "Model B",
+    "parameters_total": 64290,
+    "float32_weight_estimate_kb": 251.1328125,
+    "keras_file_size_mb": 0.809239387512207,
+    "estimated_macs": 8003712,
+    "estimated_macs_millions": 8.003712,
+    "mac_estimation_issues": [],
+    "inference_latency_median_ms": 1.5613499854225665,
+    "latency_device": "TensorFlow device used by this run",
+    "test_accuracy": 0.9270833333333334,
+    "demented_precision": 0.9418103448275862,
+    "demented_recall": 0.9104166666666667,
+    "nondemented_precision": 0.9133064516129032,
+    "nondemented_recall": 0.94375,
+    "confusion_matrix_labels_demented_then_nondemented": [
+      [
+        437,
+        43
+      ],
+      [
+        27,
+        453
+      ]
+    ]
+  },
+  {
+    "model": "MobileNetV2",
+    "parameters_total": 2260546,
+    "float32_weight_estimate_kb": 8830.2578125,
+    "keras_file_size_mb": 25.9561767578125,
+    "estimated_macs": 24451072,
+    "estimated_macs_millions": 24.451072,
+    "mac_estimation_issues": [],
+    "inference_latency_median_ms": 4.620049992809072,
+    "latency_device": "TensorFlow device used by this run",
+    "test_accuracy": 0.8760416666666667,
+    "demented_precision": 0.8491295938104448,
+    "demented_recall": 0.9145833333333333,
+    "nondemented_precision": 0.90744920993228,
+    "nondemented_recall": 0.8375,
+    "confusion_matrix_labels_demented_then_nondemented": [
+      [
+        439,
+        41
+      ],
+      [
+        78,
+        402
+      ]
+    ]
+  },
+  {
+    "model": "EfficientNet-B0",
+    "parameters_total": 4052133,
+    "float32_weight_estimate_kb": 15828.64453125,
+    "keras_file_size_mb": 46.62632751464844,
+    "estimated_macs": 31969152,
+    "estimated_macs_millions": 31.969152,
+    "mac_estimation_issues": [],
+    "inference_latency_median_ms": 9.129049984039739,
+    "latency_device": "TensorFlow device used by this run",
+    "test_accuracy": 0.9270833333333334,
+    "demented_precision": 0.9399141630901288,
+    "demented_recall": 0.9125,
+    "nondemented_precision": 0.9149797570850202,
+    "nondemented_recall": 0.9416666666666667,
+    "confusion_matrix_labels_demented_then_nondemented": [
+      [
+        438,
+        42
+      ],
+      [
+        28,
+        452
+      ]
+    ]
+  }
+]
