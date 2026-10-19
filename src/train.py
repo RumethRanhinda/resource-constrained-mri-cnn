@@ -23,7 +23,7 @@ class EpochTimer(tf.keras.callbacks.Callback):
 
 def get_datasets(data_dir, batch_size=32, image_size=(64, 64)):
     """
-    Creates tf.data.Dataset pipelines for train, validation, and test sets.
+    Creates tf.data.Dataset for train, validation, and test sets.
     """
     train_dir = os.path.join(data_dir, 'train')
     val_dir = os.path.join(data_dir, 'val')
@@ -61,7 +61,7 @@ def get_datasets(data_dir, batch_size=32, image_size=(64, 64)):
         shuffle=False
     )
     
-    # Cache and prefetch for hardware I/O efficiency
+    # Cache and prefetch
     AUTOTUNE = tf.data.AUTOTUNE
     train_ds = train_ds.cache().prefetch(buffer_size=AUTOTUNE)
     val_ds = val_ds.cache().prefetch(buffer_size=AUTOTUNE)
@@ -140,7 +140,7 @@ def train_and_evaluate(model, model_name, train_ds, val_ds, test_ds, epochs=30, 
     print(f"  Starting Training: {model_name}")
     print(f"=======================================================")
     
-    # Compile with Adam optimizer as primary selection
+    # Compile with Adam optimizer
     optimizer = tf.keras.optimizers.Adam(learning_rate=lr)
     model.compile(
         optimizer=optimizer,
@@ -189,7 +189,7 @@ def train_and_evaluate(model, model_name, train_ds, val_ds, test_ds, epochs=30, 
     model_size_kb = os.path.getsize(model_save_path) / 1024.0
     print(f"Saved model to: {model_save_path} ({model_size_kb:.2f} KB)")
     
-    # Save Loss & Accuracy Curves
+    # Save Loss and Accuracy Curves
     reports_fig_dir = os.path.join(os.path.dirname(__file__), '..', 'reports', 'figures')
     plot_history(history, model_name, reports_fig_dir)
     
