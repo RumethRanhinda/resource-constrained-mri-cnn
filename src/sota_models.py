@@ -2,9 +2,14 @@ import numpy as np
 import tensorflow as tf
 from tensorflow.keras import layers, models
 
-# Name given to the pretrained backbone so it can be located later
-# (used for two-stage fine-tuning: freeze -> unfreeze).
-BACKBONE_NAME = 'backbone'
+def get_backbone(model):
+    """
+    Returns the nested pretrained backbone (the only nested Model inside the wrapper).
+
+    The backbone is deliberately NOT given a custom name: for EfficientNet, Keras builds the
+    ImageNet weight download URL from the model name, so renaming it breaks the download (HTTP 403).
+    """
+    return next(layer for layer in model.layers if isinstance(layer, tf.keras.Model))
 
 
 def _build_transfer_model(base_fn, preprocess, name, input_shape, num_classes, weights):
@@ -24,7 +29,7 @@ def _build_transfer_model(base_fn, preprocess, name, input_shape, num_classes, w
     if preprocess is not None:
         x = preprocess(x)
 
-    base = base_fn(include_top=False, weights=weights, input_shape=(h, w, 3), name=BACKBONE_NAME)
+    base = base_fn(include_top=False, weights=weights, input_shape=(h, w, 3))
     base.trainable = False  # stage 1: train only the new classification head
     x = base(x, training=False)  # keep BatchNorm layers in inference mode
 
@@ -69,7 +74,7 @@ def set_backbone_trainable(model, trainable, freeze_batchnorm=True):
     freeze_batchnorm=True keeps BatchNorm layers frozen when unfreezing, which is
     the usual choice for fine-tuning on a small dataset.
     """
-    base = model.get_layer(BACKBONE_NAME)
+    base = get_backbone(model)
     base.trainable = trainable
     if trainable and freeze_batchnorm:
         for layer in base.layers:

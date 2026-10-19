@@ -1,0 +1,76 @@
+{
+  "Model_MobileNetV2": {
+    "model_name": "Model_MobileNetV2",
+    "total_params": 2260546,
+    "trainable_params_stage1": 2562,
+    "trainable_params_stage2": 2192322,
+    "size_weights_mb": 9.035408020019531,
+    "size_fp32_estimate_mb": 8.623298645019531,
+    "size_keras_file_mb": 25.9561767578125,
+    "avg_time_per_epoch_sec": 23.09701590538025,
+    "epochs_run_stage1": 5,
+    "epochs_run_stage2": 15,
+    "test_accuracy": 0.8385416666666666,
+    "precision_nondemented_pos": 0.8619153674832962,
+    "recall_nondemented_pos": 0.80625,
+    "precision_demented_pos": 0.8180039138943248,
+    "recall_demented_pos": 0.8708333333333333,
+    "confusion_matrix": [
+      [
+        418,
+        62
+      ],
+      [
+        93,
+        387
+      ]
+    ],
+    "settings": {
+      "weights": "imagenet",
+      "batch_size": 32,
+      "epochs_head": 5,
+      "epochs_finetune": 15,
+      "lr_head": 0.001,
+      "lr_finetune": 0.0001,
+      "unfreeze_top": 0,
+      "early_stopping": true
+    }
+  },
+  "Model_EfficientNetB0": {
+    "model_name": "Model_EfficientNetB0",
+    "total_params": 4052133,
+    "trainable_params_stage1": 2562,
+    "trainable_params_stage2": 3968094,
+    "size_weights_mb": 16.050399780273438,
+    "size_fp32_estimate_mb": 15.457660675048828,
+    "size_keras_file_mb": 46.62632751464844,
+    "avg_time_per_epoch_sec": 43.523071718215945,
+    "epochs_run_stage1": 5,
+    "epochs_run_stage2": 15,
+    "test_accuracy": 0.9270833333333334,
+    "precision_nondemented_pos": 0.9149797570850202,
+    "recall_nondemented_pos": 0.9416666666666667,
+    "precision_demented_pos": 0.9399141630901288,
+    "recall_demented_pos": 0.9125,
+    "confusion_matrix": [
+      [
+        438,
+        42
+      ],
+      [
+        28,
+        452
+      ]
+    ],
+    "settings": {
+      "weights": "imagenet",
+      "batch_size": 32,
+      "epochs_head": 5,
+      "epochs_finetune": 15,
+      "lr_head": 0.001,
+      "lr_finetune": 0.0001,
+      "unfreeze_top": 0,
+      "early_stopping": true
+    }
+  }
+}
