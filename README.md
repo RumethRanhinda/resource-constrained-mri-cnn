@@ -27,7 +27,7 @@ This project explores the tripartite trade-offs between **model capacity**, **co
 | **Non-Demented Precision / Recall**| 95.53% / 97.92% | 91.33% / 94.38% | 90.75% / 83.75% | 91.50% / 94.17% |
 
 ### Core Takeaways:
-1. **Ultra-Lightweight Efficiency:** **Model B** satisfies strict edge hardware budgets (< 100k parameters), reducing memory footprint by **72%** (251 KB) and compute operations by **46%** (8.00M MACs) compared to the baseline, while sustaining an impressive **92.71% test accuracy**.
+1. **Ultra-Lightweight Efficiency:** **Model B** satisfies strict edge hardware budgets (< 100k parameters), reducing memory footprint by **72%** (251 KB) and compute operations by **46%** (8.00M MACs) compared to the baseline, while sustaining an **92.71% test accuracy**.
 2. **Custom Edge vs. Heavy SOTA Models:** Massive transfer learning backbones (MobileNetV2: 2.26M params, EfficientNet-B0: 4.05M params) did **not** outperform our custom edge design on $64 \times 64$ resolution. EfficientNet-B0 matched Model B at 92.71% accuracy but required **63× more parameters** and **4× more MACs**, highlighting that standard ImageNet architectures can be excessively heavy and prone to domain mismatch for low-resolution edge sensor streams.
 3. **Optimizer Dynamics:** In convergence experiments on Model B, **Adam ($\text{lr}=10^{-3}$)** rapidly converged to >90% accuracy within 10 epochs. Plain SGD struggled at 75.21% accuracy, while adding moderate momentum ($\text{momentum}=0.5$) boosted SGD test accuracy to 87.40%. Excessive momentum ($0.9\text{--}0.99$) induced destabilizing oscillations around steep loss contours.
 
@@ -95,10 +95,10 @@ CNN-Img-classification/
 │       ├── train/                  # 4,480 images (2,240 Demented, 2,240 NonDemented)
 │       ├── val/                    # 960 images (480 Demented, 480 NonDemented)
 │       └── test/                   # 960 images (480 Demented, 480 NonDemented)
-├── docs/                           # Documentation and assignment specifications
+├── docs/                           # Documentation and specifications
 ├── models/                         # Saved trained checkpoints (.keras format)
 ├── reports/
-│   ├── figures/                    # High-resolution benchmark plots & confusion matrices
+│   ├── figures/                    # Benchmark plots & confusion matrices
 │   ├── final_comparison.json       # Side-by-side metrics across all four models
 │   ├── optimizer_results.json      # Epoch-by-epoch loss & accuracy for optimizer study
 │   └── sota_results.json           # Fine-tuning logs & metrics for MobileNetV2 / EfficientNet
@@ -206,6 +206,6 @@ python src/compare_models.py
 
 This project is open-source under the [MIT License](LICENSE).
 
-Developed as part of the **EN3150: Image Processing & Machine Vision** course at the **University of Moratuwa**, Department of Electronic and Telecommunication Engineering.
+Developed as part of the **EN3150 - Pattern Recognition** course at the **University of Moratuwa**, Department of Electronic and Telecommunication Engineering.
 
 If you find this benchmark or architectural comparison useful in your work, feel free to cite or star this repository!
